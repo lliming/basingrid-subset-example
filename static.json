@@ -8,42 +8,130 @@
     "version": "1.0.0",
     "attributes": {
       "metadata": {
-        "title": "Search | Globus Search Portal"
+        "title": "Search | BASINGRID Subset (100 basins)"
       },
       "content": {
-        "headline": "Globus Search Portal"
+        "headline": "BASINGRID Subset (100 basins)"
       },
       "features": {
         "transfer": false
       },
       "components": {
         "Result": {
-          "heading": "entries[0].content.name",
+          "heading": "entries[0].content.basin.original_basin_index",
           "fields": [
             {
-              "label": "Tags",
-              "property": "entries[0].content.tags"
+              "label": "Site ID",
+              "property": "entries[0].content.basin.site_id"
             },
             {
-              "label": "Region",
-              "property": "entries[0].content.region"
+              "label": "USGS Part Code",
+              "property": "entries[0].content.basin.usgs_part_code"
+            },
+            {
+              "label": "Basin Region",
+              "property": "entries[0].content.basin.region"
+            },
+            {
+              "label": "Area Class",
+              "property": "entries[0].content.spatial.area_class"
+            },
+            {
+              "label": "Bounding Box",
+              "property": "entries[0].content.spatial.bbox_wgs84"
+            },
+            {
+              "label": "Start Date",
+              "property": "entries[0].content.temporal.start_date"
+            },
+            {
+              "label": "End Date",
+              "property": "entries[0].content.temporal.end_date"
+            },
+            {
+              "label": "Temporal Resolution",
+              "property": "entries[0].content.temporal.temporal_resolution"
+            },
+            {
+              "label": "Elevation Class",
+              "property": "entries[0].content.terrain.elevation_class"
+            },
+            {
+              "label": "Dominant Land Cover",
+              "property": "entries[0].content.land_cover.dominant_class"
+            },
+            {
+              "label": "Fraction of Docminant Land Cover",
+              "property": "entries[0].content.land_cover.dominant_fraction"
+            },
+            {
+              "label": "Other Land Cover Classes",
+              "property": "entries[0].content.land_cover.classes_present"
+            },
+            {
+              "label": "Fraction of Developed Land",
+              "property": "entries[0].content.land_cover.developed_fraction"
+            },
+            {
+              "label": "Fraction of Agricultural Land",
+              "property": "entries[0].content.land_cover.agricultural_fraction"
+            },
+            {
+              "label": "Mean Daily Precipitation (mm)",
+              "property": "entries[0].content.climate_summary.precip_daily_mean_mm"
+            },
+            {
+              "label": "Wet Days",
+              "property": "entries[0].content.climate_summary.wet_days"
+            },
+            {
+              "label": "Snow Present?",
+              "property": "entries[0].content.climate_summary.snow_present"
+            },
+            {
+              "label": "Quality Grade",
+              "property": "entries[0].content.quality.grade"
             }
           ]
         }
       },
       "globus": {
         "search": {
-          "index": "78b92aca-e361-4307-8f66-bc448f20e2c3",
+          "index": "d1b2a3cc-00a9-477b-82cd-3fc9cc8b7610",
           "facets": [
             {
-              "name": "Tags",
-              "field_name": "tags",
+              "name": "Region",
+              "field_name": "basin.region",
               "type": "terms",
               "size": 10
             },
             {
-              "name": "Region",
-              "field_name": "region",
+              "name": "Dominant Land Cover",
+              "field_name": "land_cover.dominant_class",
+              "type": "terms",
+              "size": 10
+            },
+            {
+              "name": "Land Cover Classes",
+              "field_name": "land_cover.classes_present",
+              "type": "terms",
+              "size": 10
+            },
+            {
+              "name": "Elevation Class",
+              "field_name": "terrain.elevation_class",
+              "type": "terms",
+              "size": 10
+            },
+            {
+              "name": "Quality",
+              "field_name": "quality.grade",
+              "type": "terms",
+              "size": 10
+            },
+            {
+              "name": "Snow Present",
+              "field_name": "climate_summary.snow_present",
               "type": "terms",
               "size": 10
             }
