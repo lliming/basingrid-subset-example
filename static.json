@@ -18,7 +18,7 @@
       },
       "components": {
         "Result": {
-          "heading": "entries[0].content.basin.original_basin_index",
+          "heading": "entries[0].content.basin.site_id",
           "summary": "entries[0].content.basin.region",
           "fields": [
             {
