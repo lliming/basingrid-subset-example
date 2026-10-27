@@ -21,6 +21,10 @@
           "heading": "entries[0].content.basin.original_basin_index",
           "fields": [
             {
+              "label": "Original Basin Index",
+              "property": "entries[0].content.basin.original_basin_index"
+            },
+            {
               "label": "Site ID",
               "property": "entries[0].content.basin.site_id"
             },
