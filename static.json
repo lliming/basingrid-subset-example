@@ -19,8 +19,8 @@
       },
       "components": {
         "Result": {
-          "heading": "entries[0].content.basin.site_id",
-          "summary": "entries[0].content.basin.region",
+          "heading": "'Site ID: ' & entries[0].content.basin.site_id",
+          "summary": "entries[0].content.basin.region & ', ' & entries[0].content.terrain.elevation_class",
           "fields": [
             {
               "label": "Original Basin Index",
